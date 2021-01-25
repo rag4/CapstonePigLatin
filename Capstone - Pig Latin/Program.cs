@@ -23,7 +23,7 @@ namespace Capstone___Pig_Latin
                 Console.WriteLine("\nEnter word to be translated: ");
                 string word = Console.ReadLine();
                 //VALIDATE THAT IT IS NOT NULL
-                string[] origin = ValidWord(word).Split(' ');   //SPLIT SENTENCE BY SPACE
+                string[] origin = ValidWord(word).Split(' ', StringSplitOptions.RemoveEmptyEntries);   //SPLIT SENTENCE BY SPACE
                 string translate = "";                          //STORE RESULT IN THIS STRING VARIABLE
 
                 foreach (string s in origin)
