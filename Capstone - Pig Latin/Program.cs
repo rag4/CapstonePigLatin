@@ -79,15 +79,16 @@ namespace Capstone___Pig_Latin
         //RETURN STRING
         private static string FirstConstant(char[] vowel, string translate, string s)
         {
-            int temp = -1;
-            for (int i = 0; i < s.Length; i++)
+            int temp = s.IndexOfAny(vowel);
+            /*for (int i = 0; i < s.Length; i++)
             {
                 if (vowel.Contains(s[i]))
                 {
                     temp = i;
                     continue;
                 }
-            }
+            }*/
+
             if (temp != -1)
             {
                 string another = s.Substring(temp) + s.Substring(0, temp);
